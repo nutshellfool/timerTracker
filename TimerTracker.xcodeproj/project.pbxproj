@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D7E11893DA4E39493D614BC /* Pods_TimerTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1704ED8038A99B795C0D2F8E /* Pods_TimerTracker.framework */; };
 		A5C08D5E1D7FB6ED000E27BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D5D1D7FB6ED000E27BF /* AppDelegate.swift */; };
 		A5C08D601D7FB6ED000E27BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D5F1D7FB6ED000E27BF /* ViewController.swift */; };
 		A5C08D631D7FB6ED000E27BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C08D611D7FB6ED000E27BF /* Main.storyboard */; };
@@ -14,6 +15,17 @@
 		A5C08D681D7FB6ED000E27BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C08D661D7FB6ED000E27BF /* LaunchScreen.storyboard */; };
 		A5C08D731D7FB6ED000E27BF /* TimerTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D721D7FB6ED000E27BF /* TimerTrackerTests.swift */; };
 		A5C08D7E1D7FB6ED000E27BF /* TimerTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D7D1D7FB6ED000E27BF /* TimerTrackerUITests.swift */; };
+		A5C08D921D82656A000E27BF /* MBFDBAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D8D1D82656A000E27BF /* MBFDBAgent.m */; };
+		A5C08D931D82656A000E27BF /* MBFSQLiteBaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D8F1D82656A000E27BF /* MBFSQLiteBaseTable.m */; };
+		A5C08D941D82656A000E27BF /* MBFSQLiteOpenHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D911D82656A000E27BF /* MBFSQLiteOpenHelper.m */; };
+		A5C08D9C1D826945000E27BF /* MBFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D991D826945000E27BF /* MBFUtils.m */; };
+		A5C08D9D1D826945000E27BF /* MBFFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D9A1D826945000E27BF /* MBFFileUtils.m */; };
+		A5C08DA21D83F7EE000E27BF /* MBGLTimeRecordSQLiteTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D9F1D83F7EE000E27BF /* MBGLTimeRecordSQLiteTable.m */; };
+		A5C08DA31D83F7EE000E27BF /* MBGLMainDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C08DA11D83F7EE000E27BF /* MBGLMainDBHelper.m */; };
+		A5DE9E241D8D28CF0004DB2C /* RecordInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE9E231D8D28CF0004DB2C /* RecordInfoModel.swift */; };
+		A5DE9E261D8D4E560004DB2C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE9E251D8D4E560004DB2C /* SettingsViewController.swift */; };
+		A5FF42C11D86A0610083B4FA /* MBGLRecordInfoSQLiteTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF42C01D86A0610083B4FA /* MBGLRecordInfoSQLiteTable.m */; };
+		A5FF42C31D8BA7CB0083B4FA /* RecordInfoTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF42C21D8BA7CB0083B4FA /* RecordInfoTableviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1704ED8038A99B795C0D2F8E /* Pods_TimerTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C08D5A1D7FB6ED000E27BF /* TimerTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C08D5D1D7FB6ED000E27BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C08D5F1D7FB6ED000E27BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +60,28 @@
 		A5C08D791D7FB6ED000E27BF /* TimerTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C08D7D1D7FB6ED000E27BF /* TimerTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTrackerUITests.swift; sourceTree = "<group>"; };
 		A5C08D7F1D7FB6ED000E27BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C08D8C1D82656A000E27BF /* MBFDBAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFDBAgent.h; sourceTree = "<group>"; };
+		A5C08D8D1D82656A000E27BF /* MBFDBAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFDBAgent.m; sourceTree = "<group>"; };
+		A5C08D8E1D82656A000E27BF /* MBFSQLiteBaseTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFSQLiteBaseTable.h; sourceTree = "<group>"; };
+		A5C08D8F1D82656A000E27BF /* MBFSQLiteBaseTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFSQLiteBaseTable.m; sourceTree = "<group>"; };
+		A5C08D901D82656A000E27BF /* MBFSQLiteOpenHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFSQLiteOpenHelper.h; sourceTree = "<group>"; };
+		A5C08D911D82656A000E27BF /* MBFSQLiteOpenHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFSQLiteOpenHelper.m; sourceTree = "<group>"; };
+		A5C08D981D826945000E27BF /* MBFFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFFileUtils.h; sourceTree = "<group>"; };
+		A5C08D991D826945000E27BF /* MBFUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFUtils.m; sourceTree = "<group>"; };
+		A5C08D9A1D826945000E27BF /* MBFFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFFileUtils.m; sourceTree = "<group>"; };
+		A5C08D9B1D826945000E27BF /* MBFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFUtils.h; sourceTree = "<group>"; };
+		A5C08D9E1D83F7EE000E27BF /* MBGLTimeRecordSQLiteTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBGLTimeRecordSQLiteTable.h; sourceTree = "<group>"; };
+		A5C08D9F1D83F7EE000E27BF /* MBGLTimeRecordSQLiteTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGLTimeRecordSQLiteTable.m; sourceTree = "<group>"; };
+		A5C08DA01D83F7EE000E27BF /* MBGLMainDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBGLMainDBHelper.h; sourceTree = "<group>"; };
+		A5C08DA11D83F7EE000E27BF /* MBGLMainDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGLMainDBHelper.m; sourceTree = "<group>"; };
+		A5C08DA61D83FE3B000E27BF /* TimerTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimerTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		A5DE9E231D8D28CF0004DB2C /* RecordInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordInfoModel.swift; sourceTree = "<group>"; };
+		A5DE9E251D8D4E560004DB2C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A5FF42BF1D86A0610083B4FA /* MBGLRecordInfoSQLiteTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBGLRecordInfoSQLiteTable.h; sourceTree = "<group>"; };
+		A5FF42C01D86A0610083B4FA /* MBGLRecordInfoSQLiteTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGLRecordInfoSQLiteTable.m; sourceTree = "<group>"; };
+		A5FF42C21D8BA7CB0083B4FA /* RecordInfoTableviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordInfoTableviewCell.swift; sourceTree = "<group>"; };
+		E57C5255D50FB88E793CE7AA /* Pods-TimerTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimerTracker/Pods-TimerTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		EB6F13CA2022619F781EFD3A /* Pods-TimerTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimerTracker/Pods-TimerTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7E11893DA4E39493D614BC /* Pods_TimerTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B3C8692270705E599A559A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1704ED8038A99B795C0D2F8E /* Pods_TimerTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BC62BD0DC100438637A9F2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E57C5255D50FB88E793CE7AA /* Pods-TimerTracker.debug.xcconfig */,
+				EB6F13CA2022619F781EFD3A /* Pods-TimerTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A5C08D511D7FB6ED000E27BF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +134,8 @@
 				A5C08D711D7FB6ED000E27BF /* TimerTrackerTests */,
 				A5C08D7C1D7FB6ED000E27BF /* TimerTrackerUITests */,
 				A5C08D5B1D7FB6ED000E27BF /* Products */,
+				3BC62BD0DC100438637A9F2F /* Pods */,
+				1B3C8692270705E599A559A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +152,17 @@
 		A5C08D5C1D7FB6ED000E27BF /* TimerTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A5C08D8B1D82656A000E27BF /* vendor */,
 				A5C08D5D1D7FB6ED000E27BF /* AppDelegate.swift */,
 				A5C08D5F1D7FB6ED000E27BF /* ViewController.swift */,
+				A5DE9E251D8D4E560004DB2C /* SettingsViewController.swift */,
 				A5C08D611D7FB6ED000E27BF /* Main.storyboard */,
 				A5C08D641D7FB6ED000E27BF /* Assets.xcassets */,
 				A5C08D661D7FB6ED000E27BF /* LaunchScreen.storyboard */,
 				A5C08D691D7FB6ED000E27BF /* Info.plist */,
+				A5C08DA61D83FE3B000E27BF /* TimerTracker-Bridging-Header.h */,
+				A5FF42C21D8BA7CB0083B4FA /* RecordInfoTableviewCell.swift */,
+				A5DE9E231D8D28CF0004DB2C /* RecordInfoModel.swift */,
 			);
 			path = TimerTracker;
 			sourceTree = "<group>";
@@ -125,6 +185,29 @@
 			path = TimerTrackerUITests;
 			sourceTree = "<group>";
 		};
+		A5C08D8B1D82656A000E27BF /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A5C08D9E1D83F7EE000E27BF /* MBGLTimeRecordSQLiteTable.h */,
+				A5C08D9F1D83F7EE000E27BF /* MBGLTimeRecordSQLiteTable.m */,
+				A5FF42BF1D86A0610083B4FA /* MBGLRecordInfoSQLiteTable.h */,
+				A5FF42C01D86A0610083B4FA /* MBGLRecordInfoSQLiteTable.m */,
+				A5C08DA01D83F7EE000E27BF /* MBGLMainDBHelper.h */,
+				A5C08DA11D83F7EE000E27BF /* MBGLMainDBHelper.m */,
+				A5C08D8C1D82656A000E27BF /* MBFDBAgent.h */,
+				A5C08D8D1D82656A000E27BF /* MBFDBAgent.m */,
+				A5C08D8E1D82656A000E27BF /* MBFSQLiteBaseTable.h */,
+				A5C08D8F1D82656A000E27BF /* MBFSQLiteBaseTable.m */,
+				A5C08D901D82656A000E27BF /* MBFSQLiteOpenHelper.h */,
+				A5C08D911D82656A000E27BF /* MBFSQLiteOpenHelper.m */,
+				A5C08D981D826945000E27BF /* MBFFileUtils.h */,
+				A5C08D9A1D826945000E27BF /* MBFFileUtils.m */,
+				A5C08D9B1D826945000E27BF /* MBFUtils.h */,
+				A5C08D991D826945000E27BF /* MBFUtils.m */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5C08D821D7FB6ED000E27BF /* Build configuration list for PBXNativeTarget "TimerTracker" */;
 			buildPhases = (
+				56A1A174561C4B24E85DC230 /* [CP] Check Pods Manifest.lock */,
 				A5C08D561D7FB6ED000E27BF /* Sources */,
 				A5C08D571D7FB6ED000E27BF /* Frameworks */,
 				A5C08D581D7FB6ED000E27BF /* Resources */,
+				0CFC58FD7CB8E9D1F142973B /* [CP] Embed Pods Frameworks */,
+				1F25CD47397A42B76D9F568C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +279,7 @@
 				TargetAttributes = {
 					A5C08D591D7FB6ED000E27BF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XJ4CW6349Z;
 					};
 					A5C08D6D1D7FB6ED000E27BF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -251,13 +338,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CFC58FD7CB8E9D1F142973B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimerTracker/Pods-TimerTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F25CD47397A42B76D9F568C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimerTracker/Pods-TimerTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56A1A174561C4B24E85DC230 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5C08D561D7FB6ED000E27BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C08D921D82656A000E27BF /* MBFDBAgent.m in Sources */,
+				A5C08D931D82656A000E27BF /* MBFSQLiteBaseTable.m in Sources */,
+				A5C08D941D82656A000E27BF /* MBFSQLiteOpenHelper.m in Sources */,
+				A5C08D9C1D826945000E27BF /* MBFUtils.m in Sources */,
+				A5DE9E241D8D28CF0004DB2C /* RecordInfoModel.swift in Sources */,
+				A5C08DA21D83F7EE000E27BF /* MBGLTimeRecordSQLiteTable.m in Sources */,
+				A5C08DA31D83F7EE000E27BF /* MBGLMainDBHelper.m in Sources */,
+				A5C08D9D1D826945000E27BF /* MBFFileUtils.m in Sources */,
 				A5C08D601D7FB6ED000E27BF /* ViewController.swift in Sources */,
+				A5FF42C31D8BA7CB0083B4FA /* RecordInfoTableviewCell.swift in Sources */,
+				A5DE9E261D8D4E560004DB2C /* SettingsViewController.swift in Sources */,
 				A5C08D5E1D7FB6ED000E27BF /* AppDelegate.swift in Sources */,
+				A5FF42C11D86A0610083B4FA /* MBGLRecordInfoSQLiteTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,23 +545,31 @@
 		};
 		A5C08D831D7FB6ED000E27BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E57C5255D50FB88E793CE7AA /* Pods-TimerTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TimerTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimerTracker/TimerTracker-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		A5C08D841D7FB6ED000E27BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB6F13CA2022619F781EFD3A /* Pods-TimerTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TimerTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimerTracker/TimerTracker-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +638,7 @@
 				A5C08D841D7FB6ED000E27BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5C08D851D7FB6ED000E27BF /* Build configuration list for PBXNativeTarget "TimerTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +647,7 @@
 				A5C08D871D7FB6ED000E27BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5C08D881D7FB6ED000E27BF /* Build configuration list for PBXNativeTarget "TimerTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +656,7 @@
 				A5C08D8A1D7FB6ED000E27BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
