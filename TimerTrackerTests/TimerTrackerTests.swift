@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import TimerTracker
+//@testable import TimerTracker
 
 class TimerTrackerTests: XCTestCase {
     

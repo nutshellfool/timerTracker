@@ -66,7 +66,7 @@
 - (BOOL)deleteAllRecord{
     __block BOOL success = NO;
     
-    NSString *sql = [NSString stringWithFormat:@"DELETE * FROM time_records "];
+    NSString *sql = [NSString stringWithFormat:@"DELETE FROM time_records "];
     
     [self.databaseQueue inDatabase:^(FMDatabase *db) {
         success = [db executeUpdate:sql];

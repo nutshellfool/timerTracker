@@ -8,7 +8,6 @@
 
 import UIKit
 import FMDB
-//import RecordInfoModel
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
@@ -41,7 +40,22 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             actionButton.setTitle("结束", forState: UIControlState.Normal)
             if !timer.valid {
                 timeStartTime = NSDate()
-                timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval, target: self, selector: #selector(ViewController.onTimerUpaded(_:)), userInfo: nil, repeats: true)
+                timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval, target: self, selector:#selector(ViewController.onTimerUpaded), userInfo: nil, repeats: true)
+                
+                //
+                //let delay = 10*Double(NSEC_PER_SEC)
+                let delay = 1800*Double(NSEC_PER_SEC)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                dispatch_after(time, dispatch_get_main_queue()) {
+                    //
+                    // timeout stop the timer
+                    //
+                    self.timerStatus = 0
+                    // stop the timer
+                    self.timer.invalidate();
+                    self.actionButton.setTitle("开始", forState: UIControlState.Normal)
+                    self.timerDisplayLable.text = formatTimeInterval(0) as String
+                }
             }
             
         }else{
@@ -83,12 +97,16 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         actionButton.layer.borderWidth = 1.0
         actionButton.layer.borderColor = UIColor.blueColor().CGColor
         
-//        recordInfos = dbAgent.queryRecordInfos();
         loadRecordInfos()
         mainTableview.allowsMultipleSelectionDuringEditing = false;
         mainTableview.tableFooterView = UIView(frame: .zero);
         recordIntervalLable.text = "--"
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        loadRecordInfos()
+        mainTableview.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,42 +126,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         recordInfos = recordArray
     }
     
-    func onTimerUpaded(timer:NSTimer) {
+    func onTimerUpaded() {
         timeCount += timeInterval
         timerDisplayLable.text = formatTimeInterval(timeCount) as String
     }
     
-    func formatTimeInterval(time:NSTimeInterval) -> String {
-        return formatTimeInterval(time, format: "%02i:%02i:%02i") as String
-    }
     
-    func formatTimeInterval(time:NSTimeInterval, format:String) -> NSString {
-        let minutes = Int(time) / 60
-        let seconds = time - Double(minutes) * 60
-        let secondsFraction = seconds - Double(Int(seconds))
-        return String(format:format,minutes,Int(seconds),Int(secondsFraction*100))
-    }
-    func formatTimeInSeconds(seconds:Int, format:String) -> NSString {
-        let minutes = seconds / 60
-        let seconds = seconds % 60
-//        let secondsFraction = seconds - Double(Int(seconds))
-        return String(format:format,minutes,Int(seconds))
-    }
-    
-    func getDatebyString(dateString:NSString) -> NSDate {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        return formatter.dateFromString(dateString as String)!
-    }
-    
-    func getDateFormatString(date:NSDate) -> String {
-//        var todaysDate = NSDate().dateFromString("2015-02-04 23:29:28", format:  "yyyy-MM-dd HH:mm:ss")
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        let DateInFormat = dateFormatter.stringFromDate(date)
-        
-        return DateInFormat
-    }
     
     func secondsBetweenDates(startDate: NSDate, endDate: NSDate) -> Int
     {
@@ -163,6 +151,19 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         cell.leftLable.text = infoData.startTime
         cell.centerLable.text = infoData.durationDisplayStr
         cell.rightLable.text = infoData.recordIntervalDisplayStr
+        
+        if infoData.isDurationNormal {
+            cell.centerLable.textColor = UIColor.redColor()
+        }else{
+            cell.centerLable.textColor = UIColor.blackColor()
+        }
+        
+        
+        if infoData.isRecordIntervalNormal {
+            cell.rightLable.textColor = UIColor.redColor()
+        }else{
+            cell.rightLable.textColor = UIColor.blackColor()
+        }
 
         return cell
     }

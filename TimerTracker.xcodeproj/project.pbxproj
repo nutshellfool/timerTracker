@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D7E11893DA4E39493D614BC /* Pods_TimerTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1704ED8038A99B795C0D2F8E /* Pods_TimerTracker.framework */; };
+		A5BF49151D8FAEDC00ED0CD9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF49141D8FAEDC00ED0CD9 /* Utils.swift */; };
 		A5C08D5E1D7FB6ED000E27BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D5D1D7FB6ED000E27BF /* AppDelegate.swift */; };
 		A5C08D601D7FB6ED000E27BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D5F1D7FB6ED000E27BF /* ViewController.swift */; };
 		A5C08D631D7FB6ED000E27BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C08D611D7FB6ED000E27BF /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		1704ED8038A99B795C0D2F8E /* Pods_TimerTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BF49141D8FAEDC00ED0CD9 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A5C08D5A1D7FB6ED000E27BF /* TimerTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C08D5D1D7FB6ED000E27BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C08D5F1D7FB6ED000E27BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				A5C08DA61D83FE3B000E27BF /* TimerTracker-Bridging-Header.h */,
 				A5FF42C21D8BA7CB0083B4FA /* RecordInfoTableviewCell.swift */,
 				A5DE9E231D8D28CF0004DB2C /* RecordInfoModel.swift */,
+				A5BF49141D8FAEDC00ED0CD9 /* Utils.swift */,
 			);
 			path = TimerTracker;
 			sourceTree = "<group>";
@@ -274,19 +277,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = lirui.me;
 				TargetAttributes = {
 					A5C08D591D7FB6ED000E27BF = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = XJ4CW6349Z;
+						LastSwiftMigration = 0800;
 					};
 					A5C08D6D1D7FB6ED000E27BF = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A5C08D591D7FB6ED000E27BF;
 					};
 					A5C08D781D7FB6ED000E27BF = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A5C08D591D7FB6ED000E27BF;
 					};
 				};
@@ -392,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C08D921D82656A000E27BF /* MBFDBAgent.m in Sources */,
+				A5BF49151D8FAEDC00ED0CD9 /* Utils.swift in Sources */,
 				A5C08D931D82656A000E27BF /* MBFSQLiteBaseTable.m in Sources */,
 				A5C08D941D82656A000E27BF /* MBFSQLiteOpenHelper.m in Sources */,
 				A5C08D9C1D826945000E27BF /* MBFUtils.m in Sources */,
@@ -472,8 +479,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -518,8 +527,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -538,6 +549,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -547,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E57C5255D50FB88E793CE7AA /* Pods-TimerTracker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TimerTracker/Info.plist;
@@ -555,6 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimerTracker/TimerTracker-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -562,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB6F13CA2022619F781EFD3A /* Pods-TimerTracker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TimerTracker/Info.plist;
@@ -570,6 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TimerTracker/TimerTracker-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -581,6 +597,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerTracker.app/TimerTracker";
 			};
 			name = Debug;
@@ -593,6 +610,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerTracker.app/TimerTracker";
 			};
 			name = Release;
@@ -604,6 +622,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = TimerTracker;
 			};
 			name = Debug;
@@ -615,6 +634,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.lirui.TimerTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = TimerTracker;
 			};
 			name = Release;

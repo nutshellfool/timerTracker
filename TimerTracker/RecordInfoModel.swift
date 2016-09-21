@@ -16,15 +16,21 @@ class RecordInfoModel: NSObject {
     var durationDisplayStr:String = ""
     var recordInterval = 0
     var recordIntervalDisplayStr:String = ""
+    var isDurationNormal:Bool = true
+    var isRecordIntervalNormal:Bool = true
+    
     
     required init(diction: NSDictionary) {
         if diction.count > 0 {
             infoId = (diction.objectForKey("id")?.integerValue)!
-            startTime = diction.objectForKey("startTime") as! String
+            let _startTime = diction.objectForKey("startTime") as! String
+            startTime = getDateStringByFormat(getDatebyString(_startTime), format: "HH:mm:ss")
             duration = (diction.objectForKey("intervalTime")?.integerValue)!
             durationDisplayStr = String.init(format: "%d 秒", duration)
+            isDurationNormal = (duration <= 30)
             recordInterval = (diction.objectForKey("recordInterval")?.integerValue)!
-            recordIntervalDisplayStr = String.init(format: "%d 秒", recordInterval)
+            recordIntervalDisplayStr = recordInterval == 0 ? "--":formatTimeInSeconds(recordInterval, format: "%02i分%02i秒") as String
+            isRecordIntervalNormal = (recordInterval <= 600)
         }
     }
     
