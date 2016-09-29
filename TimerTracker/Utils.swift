@@ -55,3 +55,7 @@ func getDateFormatString(date:NSDate) -> String {
     
     return DateInFormat
 }
+
+func localizedString(key:String, comment:String) -> String {
+    return NSLocalizedString(key, comment: comment)
+}

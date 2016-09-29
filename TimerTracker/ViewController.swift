@@ -37,7 +37,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     @IBAction func onTimerButtonClicked(sender: AnyObject) {
         if timerStatus == 0 {
             timerStatus = 1
-            actionButton.setTitle("结束", forState: UIControlState.Normal)
+            actionButton.setTitle(localizedString("VIEWCONTRLLER_ACTION_BUTTON_STOP", comment: "结束"), forState: UIControlState.Normal)
             if !timer.valid {
                 timeStartTime = NSDate()
                 timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval, target: self, selector:#selector(ViewController.onTimerUpaded), userInfo: nil, repeats: true)
@@ -55,7 +55,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
                     self.timerStatus = 0
                     // stop the timer
                     self.timer.invalidate();
-                    self.actionButton.setTitle("开始", forState: UIControlState.Normal)
+                    self.actionButton.setTitle(localizedString("VIEWCONTRLLER_ACTION_BUTTON_START", comment:"开始"), forState: UIControlState.Normal)
                     self.timerDisplayLable.text = formatTimeInterval(0) as String
                 }
             }
@@ -64,7 +64,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             timerStatus = 0
             // stop the timer
             timer.invalidate();
-            actionButton.setTitle("开始", forState: UIControlState.Normal)
+            actionButton.setTitle(localizedString("VIEWCONTRLLER_ACTION_BUTTON_START", comment:"开始"), forState: UIControlState.Normal)
             timeEndTime = NSDate()
             
             // 保存计时记录
@@ -79,9 +79,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
                     recordInterval = String(format: "%d", recordIntervalValue)
                     
                     if recordIntervalValue > 3600 {
-                        recordIntervalLable.text = "间隔超过1小时"
+                        recordIntervalLable.text = localizedString("VIEWCONTRLLER_INTERVALLABLE_OVER_AN_HOUR", comment:"间隔超过1小时") 
                     } else{
-                        recordIntervalLable.text = formatTimeInSeconds(recordIntervalValue, format: "间隔　%d分%d秒",shortFormat:"间隔 %d秒") as String
+                        recordIntervalLable.text = formatTimeInSeconds(recordIntervalValue, format: localizedString("VIEWCONTRLLER_INTERVALLABLE_TEXT_FORMAT", comment:"间隔　%d分%d秒" ),shortFormat:localizedString("VIEWCONTRLLER_INTERVALLABLE_TEXT_FORMAT_SHORT", comment: "间隔　%d分%d秒")) as String
                     }
                     
                 }
@@ -187,9 +187,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID") as! RecordInfoTableviewCell
-        cell.leftLable.text = "时间"
-        cell.centerLable.text = "持续"
-        cell.rightLable.text = "间隔"
+        cell.leftLable.text = localizedString("VIEWCONTRLLER_TABLEVIEW_HEADER_TIME", comment: "时间")
+        cell.centerLable.text = localizedString("VIEWCONTRLLER_TABLEVIEW_HEADER_DURATION", comment:"持续")
+        cell.rightLable.text = localizedString("VIEWCONTRLLER_TABLEVIEW_HEADER_INTERVAL", comment:"间隔")
         return cell.contentView;
     }
     
