@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D7E11893DA4E39493D614BC /* Pods_TimerTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1704ED8038A99B795C0D2F8E /* Pods_TimerTracker.framework */; };
+		A53139991D9CD34C00A0C0B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A531399B1D9CD34C00A0C0B7 /* InfoPlist.strings */; };
 		A563F3F71D9CC5CA00FC9138 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A563F3F91D9CC5CA00FC9138 /* Localizable.strings */; };
 		A5BF49151D8FAEDC00ED0CD9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF49141D8FAEDC00ED0CD9 /* Utils.swift */; };
 		A5C08D5E1D7FB6ED000E27BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C08D5D1D7FB6ED000E27BF /* AppDelegate.swift */; };
@@ -49,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		1704ED8038A99B795C0D2F8E /* Pods_TimerTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53139951D9CD29900A0C0B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A531399A1D9CD34C00A0C0B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A531399C1D9CD34F00A0C0B7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A563F3F31D9CC1E200FC9138 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		A563F3F41D9CC1E200FC9138 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A563F3F81D9CC5CA00FC9138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -60,7 +64,6 @@
 		A5C08D621D7FB6ED000E27BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5C08D641D7FB6ED000E27BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5C08D671D7FB6ED000E27BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A5C08D691D7FB6ED000E27BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5C08D6E1D7FB6ED000E27BF /* TimerTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C08D721D7FB6ED000E27BF /* TimerTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTrackerTests.swift; sourceTree = "<group>"; };
 		A5C08D741D7FB6ED000E27BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,9 +172,10 @@
 				A5C08D611D7FB6ED000E27BF /* Main.storyboard */,
 				A5C08D641D7FB6ED000E27BF /* Assets.xcassets */,
 				A5C08D661D7FB6ED000E27BF /* LaunchScreen.storyboard */,
-				A5C08D691D7FB6ED000E27BF /* Info.plist */,
+				A53139951D9CD29900A0C0B7 /* Info.plist */,
 				A5C08DA61D83FE3B000E27BF /* TimerTracker-Bridging-Header.h */,
 				A563F3F91D9CC5CA00FC9138 /* Localizable.strings */,
+				A531399B1D9CD34C00A0C0B7 /* InfoPlist.strings */,
 			);
 			path = TimerTracker;
 			sourceTree = "<group>";
@@ -330,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C08D681D7FB6ED000E27BF /* LaunchScreen.storyboard in Resources */,
+				A53139991D9CD34C00A0C0B7 /* InfoPlist.strings in Resources */,
 				A563F3F71D9CC5CA00FC9138 /* Localizable.strings in Resources */,
 				A5C08D651D7FB6ED000E27BF /* Assets.xcassets in Resources */,
 				A5C08D631D7FB6ED000E27BF /* Main.storyboard in Resources */,
@@ -454,6 +459,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A531399B1D9CD34C00A0C0B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A531399A1D9CD34C00A0C0B7 /* Base */,
+				A531399C1D9CD34F00A0C0B7 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		A563F3F91D9CC5CA00FC9138 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

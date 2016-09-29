@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  TimerTracker
+
+  Created by Richard Li on 16/9/29.
+  Copyright © 2016年 lirui.me. All rights reserved.
+*/
+"CFBundleDisplayName" = "宫缩计时器";
