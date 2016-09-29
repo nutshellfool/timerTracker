@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "开始"; ObjectID = "3fb-Sj-LeF"; */
+"3fb-Sj-LeF.normalTitle" = "开始";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BBA-4h-RRp"; */
+"BBA-4h-RRp.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "宫缩计时器"; ObjectID = "g5i-t8-ZOp"; */
+"g5i-t8-ZOp.title" = "宫缩计时器";
+
+/* Class = "UILabel"; text = "相关知识"; ObjectID = "gfc-uX-ekU"; */
+"gfc-uX-ekU.text" = "相关知识";
+
+/* Class = "UILabel"; text = "关于我们"; ObjectID = "kc5-Ks-qzE"; */
+"kc5-Ks-qzE.text" = "关于我们";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "q0s-NV-ODo"; */
+"q0s-NV-ODo.text" = "Label";
+
+/* Class = "UILabel"; text = "清除所有数据"; ObjectID = "sMb-Mx-oUT"; */
+"sMb-Mx-oUT.text" = "清除所有数据";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tqI-5v-ibP"; */
+"tqI-5v-ibP.text" = "Label";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "v8Y-g4-apZ"; */
+"v8Y-g4-apZ.text" = "00:00:00";
+
+/* Class = "UINavigationItem"; title = "更多"; ObjectID = "wen-B9-YrL"; */
+"wen-B9-YrL.title" = "更多";
+
+/* Class = "UILabel"; text = "--"; ObjectID = "x0f-7l-plI"; */
+"x0f-7l-plI.text" = "--";
+
+/* Class = "UIBarButtonItem"; title = "...."; ObjectID = "xAy-3y-YsE"; */
+"xAy-3y-YsE.title" = "....";
