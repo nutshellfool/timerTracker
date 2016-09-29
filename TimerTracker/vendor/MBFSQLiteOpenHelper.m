@@ -215,7 +215,7 @@
              BOOL bResult = [db executeUpdate:setversionString];
              if(bResult)
              {
-                 NSLog(@"Set DataBase Version success version=%ld", self.currentDBVersion);
+                 NSLog(@"Set DataBase Version success version=%ld", (unsigned long)self.currentDBVersion);
              }
              else
              {
@@ -252,7 +252,7 @@
                  [cursor close];
              }
              
-             NSLog(@"Get DataBase Version version=%li, m_newVersion=%ld", oldVersion, self.currentDBVersion);
+             NSLog(@"Get DataBase Version version=%li, m_newVersion=%ld", oldVersion, (unsigned long)self.currentDBVersion);
              
              if(oldVersion != -1 && oldVersion != self.currentDBVersion)
              {
@@ -269,7 +269,7 @@
         
         if(bResult)
         {
-            NSLog(@"Set DataBase Version success version=%ld", self.currentDBVersion);
+            NSLog(@"Set DataBase Version success version=%ld", (unsigned long)self.currentDBVersion);
             [self onOpen:tempDb];
             
             if (oldVersion < self.currentDBVersion) {

@@ -17,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.sharedApplication().idleTimerDisabled = true
         MBFDBAgent.sharedInstance();
+        
+        // 添加pgy
+        PgyManager.sharedPgyManager().startManagerWithAppId("54a866bc37b92a52068400e2254c65f7")
+        PgyUpdateManager.sharedPgyManager().startManagerWithAppId("54a866bc37b92a52068400e2254c65f7")
+        PgyUpdateManager.sharedPgyManager().checkUpdate()
+
         return true
     }
 

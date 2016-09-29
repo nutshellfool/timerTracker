@@ -18,11 +18,18 @@ func formatTimeInterval(time:NSTimeInterval, format:String) -> NSString {
     let secondsFraction = seconds - Double(Int(seconds))
     return String(format:format,minutes,Int(seconds),Int(secondsFraction*100))
 }
-func formatTimeInSeconds(seconds:Int, format:String) -> NSString {
+func formatTimeInSeconds(seconds:Int, format:String, shortFormat:String) -> NSString {
+    var formatedStr:String = ""
     let minutes = seconds / 60
     let seconds = seconds % 60
     //        let secondsFraction = seconds - Double(Int(seconds))
-    return String(format:format,minutes,Int(seconds))
+    if minutes == 0 {
+        formatedStr = String(format:shortFormat, Int(seconds))
+    }else{
+        formatedStr = String(format:format,minutes,Int(seconds))
+    }
+    
+    return formatedStr
 }
 
 func getDatebyString(dateString:NSString) -> NSDate {

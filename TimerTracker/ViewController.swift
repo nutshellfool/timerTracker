@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FMDB
+//import FMDB
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
@@ -41,7 +41,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             if !timer.valid {
                 timeStartTime = NSDate()
                 timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval, target: self, selector:#selector(ViewController.onTimerUpaded), userInfo: nil, repeats: true)
+                NSRunLoop.currentRunLoop().addTimer(self.timer, forMode: NSRunLoopCommonModes)
                 
+                recordIntervalLable.text = ""
                 //
                 //let delay = 10*Double(NSEC_PER_SEC)
                 let delay = 1800*Double(NSEC_PER_SEC)
@@ -75,7 +77,13 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
                     let latestRecordDate:NSDate = getDatebyString(latestEndtimeString)
                     let recordIntervalValue :Int = secondsBetweenDates(latestRecordDate, endDate: timeEndTime!)
                     recordInterval = String(format: "%d", recordIntervalValue)
-                    recordIntervalLable.text = formatTimeInSeconds(recordIntervalValue, format: "间隔　%02i分%02i秒") as String
+                    
+                    if recordIntervalValue > 3600 {
+                        recordIntervalLable.text = "间隔超过1小时"
+                    } else{
+                        recordIntervalLable.text = formatTimeInSeconds(recordIntervalValue, format: "间隔　%d分%d秒",shortFormat:"间隔 %d秒") as String
+                    }
+                    
                 }
                 dbAgent.insertRecordInfos(getDateFormatString(timeStartTime!), withEndTime: getDateFormatString(timeEndTime!), withInterval:NSString(format:"%f", timeCount) as String , withRecordInterval: recordInterval as String)
                 loadRecordInfos()
@@ -100,8 +108,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         loadRecordInfos()
         mainTableview.allowsMultipleSelectionDuringEditing = false;
         mainTableview.tableFooterView = UIView(frame: .zero);
-        recordIntervalLable.text = "--"
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -124,6 +130,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
             recordArray.append(modelItem)
         }
         recordInfos = recordArray
+        
+        if recordInfos?.count == 0 {
+            recordIntervalLable.text = "--"
+            timerDisplayLable.text = formatTimeInterval(0) as String
+        }
     }
     
     func onTimerUpaded() {
@@ -147,25 +158,31 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as! RecordInfoTableviewCell
         let infoData:RecordInfoModel = recordInfos![indexPath.row]
+        cell.contentView.backgroundColor = UIColor.clearColor()
+        cell.leftLable.font = cell.leftLable.font.fontWithSize(14)
         
         cell.leftLable.text = infoData.startTime
         cell.centerLable.text = infoData.durationDisplayStr
         cell.rightLable.text = infoData.recordIntervalDisplayStr
         
         if infoData.isDurationNormal {
-            cell.centerLable.textColor = UIColor.redColor()
-        }else{
             cell.centerLable.textColor = UIColor.blackColor()
+        }else{
+            cell.centerLable.textColor = UIColor.redColor()
         }
         
         
         if infoData.isRecordIntervalNormal {
-            cell.rightLable.textColor = UIColor.redColor()
-        }else{
             cell.rightLable.textColor = UIColor.blackColor()
+        }else{
+            cell.rightLable.textColor = UIColor.redColor()
         }
 
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -173,7 +190,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         cell.leftLable.text = "时间"
         cell.centerLable.text = "持续"
         cell.rightLable.text = "间隔"
-        return cell;
+        return cell.contentView;
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
