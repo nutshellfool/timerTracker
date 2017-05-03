@@ -22,13 +22,13 @@ class RecordInfoModel: NSObject {
     
     required init(diction: NSDictionary) {
         if diction.count > 0 {
-            infoId = (diction.objectForKey("id")?.integerValue)!
-            let _startTime = diction.objectForKey("startTime") as! String
-            startTime = getDateStringByFormat(getDatebyString(_startTime), format: "HH:mm:ss")
-            duration = (diction.objectForKey("intervalTime")?.integerValue)!
+            infoId = ((diction.object(forKey: "id") as AnyObject).intValue)!
+            let _startTime = diction.object(forKey: "startTime") as! String
+            startTime = getDateStringByFormat(getDatebyString(_startTime as NSString), format: "HH:mm:ss")
+            duration = ((diction.object(forKey: "intervalTime") as AnyObject).intValue)!
             durationDisplayStr = formatTimeInSeconds(duration, format: localizedString("VIEWCONTRLLER_CELL_TEXT_FORMAT", comment:"%d分%d秒" ), shortFormat:localizedString("VIEWCONTRLLER_CELL_TEXT_FORMAT_SHORT", comment: "%d秒")) as String
             isDurationNormal = (duration <= 30)
-            recordInterval = (diction.objectForKey("recordInterval")?.integerValue)!
+            recordInterval = ((diction.object(forKey: "recordInterval") as AnyObject).intValue)!
             isRecordIntervalNormal = (recordInterval <= 600)
             
             if recordInterval > 3600{

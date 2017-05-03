@@ -8,17 +8,17 @@
 
 import Foundation
 
-func formatTimeInterval(time:NSTimeInterval) -> String {
+func formatTimeInterval(_ time:TimeInterval) -> String {
     return formatTimeInterval(time, format: "%02i:%02i:%02i") as String
 }
 
-func formatTimeInterval(time:NSTimeInterval, format:String) -> NSString {
+func formatTimeInterval(_ time:TimeInterval, format:String) -> NSString {
     let minutes = Int(time) / 60
     let seconds = time - Double(minutes) * 60
     let secondsFraction = seconds - Double(Int(seconds))
-    return String(format:format,minutes,Int(seconds),Int(secondsFraction*100))
+    return String(format:format,minutes,Int(seconds),Int(secondsFraction*100)) as NSString
 }
-func formatTimeInSeconds(seconds:Int, format:String, shortFormat:String) -> NSString {
+func formatTimeInSeconds(_ seconds:Int, format:String, shortFormat:String) -> NSString {
     var formatedStr:String = ""
     let minutes = seconds / 60
     let seconds = seconds % 60
@@ -29,33 +29,33 @@ func formatTimeInSeconds(seconds:Int, format:String, shortFormat:String) -> NSSt
         formatedStr = String(format:format,minutes,Int(seconds))
     }
     
-    return formatedStr
+    return formatedStr as NSString
 }
 
-func getDatebyString(dateString:NSString) -> NSDate {
-    let formatter = NSDateFormatter()
+func getDatebyString(_ dateString:NSString) -> Date {
+    let formatter = DateFormatter()
     formatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-    return formatter.dateFromString(dateString as String)!
+    return formatter.date(from: dateString as String)!
 }
 
-func getDateStringByFormat(date:NSDate, format:String) -> String {
-    let dateFormatter = NSDateFormatter()
+func getDateStringByFormat(_ date:Date, format:String) -> String {
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
-    let DateInFormat = dateFormatter.stringFromDate(date)
+    let DateInFormat = dateFormatter.string(from: date)
     
     return DateInFormat
 }
 
 
-func getDateFormatString(date:NSDate) -> String {
+func getDateFormatString(_ date:Date) -> String {
     //        var todaysDate = NSDate().dateFromString("2015-02-04 23:29:28", format:  "yyyy-MM-dd HH:mm:ss")
-    let dateFormatter = NSDateFormatter()
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-    let DateInFormat = dateFormatter.stringFromDate(date)
+    let DateInFormat = dateFormatter.string(from: date)
     
     return DateInFormat
 }
 
-func localizedString(key:String, comment:String) -> String {
+func localizedString(_ key:String, comment:String) -> String {
     return NSLocalizedString(key, comment: comment)
 }
