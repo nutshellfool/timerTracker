@@ -1,5 +1,5 @@
 {
-  "language": "swift",
+  "language": "objective-c",
   "os_image": "xcode8.3",
   "os": "osx",
   "xcode_project": "TimerTracker.xcodeproj",
