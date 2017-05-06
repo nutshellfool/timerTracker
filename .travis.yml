@@ -6,11 +6,12 @@
   "xcode_scheme": "TimerTracker",
   "xcode_sdk": "iphonesimulator8.3",
   "before_install": [
-    "gem install cocoapods --pre"
+    "gem install cocoapods --pre",
+    "gem install xcpretty -N"
   ],
   "script": [
     "pod update",
     "set -o pipefail",
-    "xcodebuild -workspace TimerTracker.xcworkspace -scheme TimerTracker -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO"
+    "xcodebuild -workspace TimerTracker.xcworkspace -scheme TimerTracker -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c"
   ]
 }
