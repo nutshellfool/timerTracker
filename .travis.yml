@@ -5,7 +5,6 @@
   "xcode_project": "TimerTracker.xcodeproj",
   "xcode_scheme": "TimerTracker",
   "xcode_sdk": "iphonesimulator8.3",
-  "podfile": "",
   "before_install": [
     "gem install cocoapods --pre"
   ],

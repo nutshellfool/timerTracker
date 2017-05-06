@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MBFDBAgent.sharedInstance();
         
         // 添加pgy
-        PgyManager.shared().start(withAppId: "54a866bc37b92a52068400e2254c65f7")
-        PgyUpdateManager.sharedPgy().start(withAppId: "54a866bc37b92a52068400e2254c65f7")
-        PgyUpdateManager.sharedPgy().checkUpdate()
+//        PgyManager.shared().start(withAppId: "54a866bc37b92a52068400e2254c65f7")
+//        PgyUpdateManager.sharedPgy().start(withAppId: "54a866bc37b92a52068400e2254c65f7")
+//        PgyUpdateManager.sharedPgy().checkUpdate()
 
         return true
     }
