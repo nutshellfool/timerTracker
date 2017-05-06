@@ -5,6 +5,11 @@
   "xcode_project": "TimerTracker.xcodeproj",
   "xcode_scheme": "",
   "xcode_sdk": "iphonesimulator8.3",
+  "before_install": [
+    "rvm install ruby-2.2.2",
+    "gem install cocoapods --pre",
+    "pod repo update --silent"
+  ],
   "script": [
     "xcodebuild -workspace TimerTracker.xcworkspace -scheme TimerTracker -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO"
   ]
