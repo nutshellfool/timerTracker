@@ -2,22 +2,22 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - Pgyer (2.8.4)
-  - PgyUpdate (1.2)
+  - Pgyer (2.8.5)
+  - PgyUpdate (1.3)
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
-  - FMDB
+  - FMDB (~> 2.6.2)
   - Pgyer
   - PgyUpdate
-  - SnapKit
+  - SnapKit (~> 3.2.0)
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  Pgyer: 26edfcc8da6da6383fabfdbccd2f77c623b9d6eb
-  PgyUpdate: a42e82cec5ad4e992af390e9d494f6fc62db65e4
+  Pgyer: 69f8fba661dc99f0f5c2bba705441cc2f3cc827d
+  PgyUpdate: 38634295d19aca6c63dc4a87a595c92a13838e5b
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 1ba1e5facbd7e5cc18e3cd3f5220e19d3e1ac719
+PODFILE CHECKSUM: b54ce88c0cadc8613e5f6f08fdcd5fd757f55b23
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
