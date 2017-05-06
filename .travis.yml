@@ -4,7 +4,7 @@
   "os": "osx",
   "xcode_project": "TimerTracker.xcodeproj",
   "xcode_scheme": "TimerTracker",
-  "xcode_sdk": "iphonesimulator8.3",
+  "xcode_sdk": "iphonesimulator10.0",
   "before_install": [
     "gem install cocoapods --pre",
     "gem install xcpretty -N"
