@@ -1,0 +1,11 @@
+{
+  "language": "swift",
+  "os_image": "xcode8.3",
+  "os": "osx",
+  "xcode_project": "TimerTracker.xcodeproj",
+  "xcode_scheme": "",
+  "xcode_sdk": "iphonesimulator8.3",
+  "script": [
+    "xcodebuild -workspace TimerTracker.xcworkspace -scheme TimerTracker -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO"
+  ]
+}
