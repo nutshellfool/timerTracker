@@ -4,7 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 target 'TimerTracker' do
 # pod 'SnapKit', '~> 3.2'
-pod 'SnapKit', '~> 3.2.0'
+pod 'SnapKit', '~> 3.0.0'
 pod 'FMDB', '~> 2.6.2'
 # pod 'Pgyer'
 # pod 'PgyUpdate'
