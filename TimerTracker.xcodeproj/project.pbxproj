@@ -594,7 +594,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E57C5255D50FB88E793CE7AA /* Pods-TimerTracker.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 762NZB389M;
@@ -612,7 +612,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB6F13CA2022619F781EFD3A /* Pods-TimerTracker.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 762NZB389M;
